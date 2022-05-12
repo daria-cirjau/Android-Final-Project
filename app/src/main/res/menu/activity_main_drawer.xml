@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single"
+        >
+        <item
+            android:id="@+id/nav_travel"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Travel"
+            />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_face_24"
+            android:title="My profile"
+            />
+        <item
+            android:id="@+id/recent"
+            android:icon="@drawable/ic_baseline_place_24"
+            android:title="Recent destinations" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_baseline_engineering_24"
+                android:title="About us" />
+            <item
+                android:id="@+id/nav_support"
+                android:icon="@drawable/ic_baseline_contact_support_24"
+                android:title="Contact support" />
+    </group>
+</menu>
