@@ -1,6 +1,5 @@
 package com.google.androidfinalproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,27 +14,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.androidfinalproject.MallFragments.AfiParkingFragment;
+import com.google.androidfinalproject.MallFragments.BaneasaParkingFragment;
 import com.google.androidfinalproject.MallFragments.MegaMallParkingFragment;
 import com.google.androidfinalproject.MallFragments.SunPlazaParkingFragment;
+import com.google.androidfinalproject.NavigationFragments.AboutUs;
+import com.google.androidfinalproject.NavigationFragments.ContactSupport;
 import com.google.androidfinalproject.NavigationFragments.MainPageFragment;
 import com.google.androidfinalproject.NavigationFragments.ProfileFragment;
-import com.google.androidfinalproject.RecyclerView.RecentDestination;
-import com.google.androidfinalproject.RecyclerView.RecentDestinationsAdapter;
 import com.google.androidfinalproject.RecyclerView.RecentDestinationsListFragment;
-
+import com.google.androidfinalproject.room.CustomerSupportActivity;
+import com.google.androidfinalproject.room.CustomerSupportActivity;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout drawer;
-    private String mallName;
+    public String mallName;
 
     public static final String NAME = "name";
     public static final String EMAIL = "email";
+    public static final String MALL_NAME = "mallName";
     String name;
     String email;
 
@@ -112,6 +113,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.container,
                         new RecentDestinationsListFragment()).commit();
                 break;
+
+            case R.id.nav_support:
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                        new ContactSupport()).commit();
+                break;
+            case R.id.nav_about:
+                getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                        new AboutUs()).commit();
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -144,11 +154,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void openBaneasaFragmentOnClick(View view) {
-
+        mallName = "Baneasa";
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                new BaneasaParkingFragment()).commit();
     }
 
     public void reserveOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, ReserveActivity.class);
+        intent.putExtra(MALL_NAME,mallName);
         startActivity(intent);
     }
 
@@ -159,5 +172,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void saveChangesOnClick(){
         Toast.makeText(this, "Saved changes", Toast.LENGTH_LONG).show();
     }
+
+    public void sendProblemOnClick(){
+        EditText editTextName = findViewById(R.id.editTextTextPersonName);
+        EditText editTextEmail = findViewById(R.id.editTextTextPersonEmail);
+        EditText editTextProblem = findViewById(R.id.editTextTextMultiLine);
+
+        Intent intent = new Intent(MainActivity.this, CustomerSupportActivity.class);
+        intent.putExtra("Name",editTextName.getText().toString());
+        intent.putExtra("Email",editTextEmail.getText().toString());
+        intent.putExtra("Problem",editTextProblem.getText().toString());
+        startActivity(intent);
+    }
+
 
 }

@@ -4,21 +4,19 @@ import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 public class RecentDestination {
-    private String mall;/*
-    private String nbOfHours;
-
-    private String date;
-    private String hour;*/
+    private String mall;
     private String details;
+    private int id;
 
-    public RecentDestination(String mall, String details) {
-        this.mall = mall;/*
-        this.nbOfHours = nbOfHours;
-        this.date = date;
-        this.hour = hour;*/
+    public RecentDestination(int id, String mall, String details) {
+        this.id = id;
+        this.mall = mall;
         this.details = details;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public String getDetails() {
         return details;
@@ -30,29 +28,6 @@ public class RecentDestination {
 
     public void setMall(String mall) {
         this.mall = mall;
-    }/*
-
-    public String getNbOfHours() {
-        return nbOfHours;
     }
 
-    public void setNbOfHours(String nbOfHours) {
-        this.nbOfHours = nbOfHours;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getHour() {
-        return hour;
-    }
-
-    public void setHour(String hour) {
-        this.hour = hour;
-    }*/
 }

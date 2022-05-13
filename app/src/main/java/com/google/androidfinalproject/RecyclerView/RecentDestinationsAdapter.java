@@ -21,6 +21,11 @@ public class RecentDestinationsAdapter extends RecyclerView.Adapter<RecentDestin
         this.recentDestinationsList = recentDestinationsList;
     }
 
+
+    public void setRecentDestinationsList(List<RecentDestination> recentDestinationsList) {
+        this.recentDestinationsList = recentDestinationsList;
+    }
+
     public List<RecentDestination> getRecentDestinationsList() {
         return recentDestinationsList;
     }

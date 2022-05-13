@@ -7,7 +7,9 @@
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/drawable/random_color.xml" value="0.2555" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/drawable/transparent_toolbar.xml" value="0.2555" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/font/.xml" value="0.3257802479692176" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_about_us.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_afi_parking.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_customer_support.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_fragment_helper.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_log_in_project.xml" value="0.33" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_log_in_project2.xml" value="0.358695652173913" />
@@ -19,17 +21,21 @@
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_reserve.xml" value="0.33" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_reserved.xml" value="0.26582278481012656" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_select_parking_lot.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/activity_splashscreen.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/animation.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/app_bar_navigation_darwer.xml" value="0.1" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/content_main.xml" value="0.1" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/content_navigation_darwer.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_about_us.xml" value="0.5" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_afi_parking.xml" value="0.33" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_baneasa_parking.xml" value="0.5" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_contact_support.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_first.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_fullscreen.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_gallery.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_home.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_main_page.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_maps.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_mega_mall.xml" value="0.33" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_mega_mall_parking.xml" value="0.33" />
         <entry key="..\:/Users/Daria/Desktop/android/AndroidFinalProject/app/src/main/res/layout/fragment_new_journey.xml" value="0.3009833262077811" />

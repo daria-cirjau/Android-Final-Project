@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecyclerView.RecentDestinationsListFragment">
+    tools:context=".SplashscreenActivity"
+    android:background="@drawable/background">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="124dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:itemCount="2"
-        tools:listitem="@layout/recycler_view_item_2" />
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="86234-select-location.json"
+        app:lottie_loop="true" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

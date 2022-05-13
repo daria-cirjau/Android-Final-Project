@@ -12,7 +12,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.androidfinalproject.NavigationFragments.ProfileFragment;
 import com.google.androidfinalproject.RecyclerView.RecentDestination;
+import com.google.androidfinalproject.RecyclerView.RecentDestinationsListFragment;
 
 import java.util.Calendar;
 
@@ -28,6 +30,9 @@ public class ReserveActivity extends AppCompatActivity {
     private TextView textViewDate;
     private TextView textViewTime;
     private EditText editTextNumberOfHrs;
+
+    public static final String MALL_NAME = "name";
+    public static final String DETAILS = "details";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,11 @@ public class ReserveActivity extends AppCompatActivity {
 
         hour = calendar.get(Calendar.HOUR);
         minute = calendar.get(Calendar.MINUTE);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            mall = extras.getString(MALL_NAME);
+        }
     }
 
     public void openDatePickerOnClick(View view) {
@@ -67,31 +77,19 @@ public class ReserveActivity extends AppCompatActivity {
         timePickerDialog.show();
     }
 
-    public void reserveActivityOnClick() {
-        RecentDestination recentDestination = new RecentDestination(this.mall,
-                String.valueOf(this.editTextNumberOfHrs.getText().toString()+ " " +this.day + "-"+ this.month +"-"+ this.year+" "+ this.hour+":"+ this.minute));
 
-    }
 
-    public String getMall(){
-        return mall;
-    }
-
-    public String getDate(){
-        return this.day + "-"+ this.month +"-"+ this.year+" ";
-
-    }
-
-    public String getHour(){
-        return this.hour+":"+ this.minute;
-    }
-
-    public String getNbOfHours() {
-        return this.editTextNumberOfHrs.getText().toString();
+    public String getDetails(){
+        return String.valueOf(this.editTextNumberOfHrs.getText().toString()+ " " +this.day + "-"+ this.month +"-"+ this.year+" "+ this.hour+":"+ this.minute);
     }
 
 
     public void reserveActivityOnClick(View view) {
+        Bundle bundle = new Bundle();
+        bundle.putString(MALL_NAME, mall);
+        bundle.putString(DETAILS, getDetails());
+        RecentDestinationsListFragment recentDestinationsListFragment = new RecentDestinationsListFragment();
+        recentDestinationsListFragment.setArguments(bundle);
         Intent intent = new Intent(ReserveActivity.this, ReservedActivity.class);
         startActivity(intent);
     }

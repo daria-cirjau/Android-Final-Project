@@ -8,14 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.androidfinalproject.MainActivity;
 import com.google.androidfinalproject.R;
 
 public class SunPlazaParkingFragment extends Fragment {
 
+    private String name;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
