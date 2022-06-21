@@ -12,7 +12,7 @@ public class CustomerSupportRepository {
 
     CustomerSupportRepository(Application application){
         CustomerSupportDatabase customerSupportDatabase = CustomerSupportDatabase.getDatabase(application);
-        customerSupportDao = customerSupportDatabase.wordDao();
+        customerSupportDao = customerSupportDatabase.csDao();
         customerSupport = customerSupportDao.getCustomerSupportList();
     }
 

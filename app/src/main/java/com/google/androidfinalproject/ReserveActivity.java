@@ -12,10 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-import com.google.androidfinalproject.NavigationFragments.ProfileFragment;
-import com.google.androidfinalproject.RecyclerView.RecentDestination;
-import com.google.androidfinalproject.RecyclerView.RecentDestinationsListFragment;
-
 import java.util.Calendar;
 
 public class ReserveActivity extends AppCompatActivity {
@@ -85,12 +81,9 @@ public class ReserveActivity extends AppCompatActivity {
 
 
     public void reserveActivityOnClick(View view) {
-        Bundle bundle = new Bundle();
-        bundle.putString(MALL_NAME, mall);
-        bundle.putString(DETAILS, getDetails());
-        RecentDestinationsListFragment recentDestinationsListFragment = new RecentDestinationsListFragment();
-        recentDestinationsListFragment.setArguments(bundle);
-        Intent intent = new Intent(ReserveActivity.this, ReservedActivity.class);
+        Intent intent = new Intent(ReserveActivity.this, MainActivity.class);
+        intent.putExtra(MALL_NAME, mall);
+        intent.putExtra(DETAILS, getDetails());
         startActivity(intent);
     }
 }

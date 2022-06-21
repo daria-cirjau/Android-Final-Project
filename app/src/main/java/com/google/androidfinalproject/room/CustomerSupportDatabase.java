@@ -13,7 +13,7 @@ import java.util.concurrent.Executors;
 
 @Database(entities = {CustomerSupport.class}, version = 1)
 public abstract class CustomerSupportDatabase extends RoomDatabase {
-        public abstract CustomerSupportDao wordDao();
+        public abstract CustomerSupportDao csDao();
         private static volatile CustomerSupportDatabase INSTANCE;
         static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(4);
 

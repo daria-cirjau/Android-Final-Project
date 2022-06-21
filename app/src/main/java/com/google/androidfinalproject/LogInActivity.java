@@ -26,7 +26,6 @@ public class LogInActivity extends AppCompatActivity {
     }
 
     public void loginOnClick(View view){
-        //Intent intent = new Intent(Intent.ACTION_PROCESS_TEXT);
         String email = editEmailText.getText().toString();
         String password = editPasswordText.getText().toString();
         Intent intent = new Intent(LogInActivity.this, MainActivity.class);

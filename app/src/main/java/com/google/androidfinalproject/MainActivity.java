@@ -22,10 +22,9 @@ import com.google.androidfinalproject.MallFragments.MegaMallParkingFragment;
 import com.google.androidfinalproject.MallFragments.SunPlazaParkingFragment;
 import com.google.androidfinalproject.NavigationFragments.AboutUs;
 import com.google.androidfinalproject.NavigationFragments.ContactSupport;
+import com.google.androidfinalproject.NavigationFragments.DestinationFragment;
 import com.google.androidfinalproject.NavigationFragments.MainPageFragment;
 import com.google.androidfinalproject.NavigationFragments.ProfileFragment;
-import com.google.androidfinalproject.RecyclerView.RecentDestinationsListFragment;
-import com.google.androidfinalproject.room.CustomerSupportActivity;
 import com.google.androidfinalproject.room.CustomerSupportActivity;
 
 
@@ -59,18 +58,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-
-
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container,
-                    new MainPageFragment()).commit();
+                    new DestinationFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_travel);
         }
 
 
-        Intent intent = getIntent();
-        name = intent.getStringExtra("Name");
-        email = intent.getStringExtra("Email");
+        Intent intentNav = getIntent();
+        name = intentNav.getStringExtra("Name");
+        email = intentNav.getStringExtra("Email");
 
         View headerView = navigationView.getHeaderView(0);
         TextView viewNume = (TextView) headerView.findViewById(R.id.textViewNume);
@@ -78,9 +75,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView viewEmail = (TextView) headerView.findViewById(R.id.textViewEmailNav);
         viewEmail.setText(email);
 
+
+
     }
-
-
 
     public String getName() {
         return name;
@@ -107,12 +104,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_travel:
             getSupportFragmentManager().beginTransaction().replace(R.id.container,
-                new MainPageFragment()).commit();
+                new DestinationFragment()).commit();
             break;
-            case R.id.recent:
-                getSupportFragmentManager().beginTransaction().replace(R.id.container,
-                        new RecentDestinationsListFragment()).commit();
-                break;
 
             case R.id.nav_support:
                 getSupportFragmentManager().beginTransaction().replace(R.id.container,
@@ -169,11 +162,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toast.makeText(this, "Please choose another parking spot!", Toast.LENGTH_LONG).show();
     }
 
-    public void saveChangesOnClick(){
+    public void saveChangesOnClick(View view){
         Toast.makeText(this, "Saved changes", Toast.LENGTH_LONG).show();
     }
 
-    public void sendProblemOnClick(){
+    public void sendProblemOnClick(View view){
         EditText editTextName = findViewById(R.id.editTextTextPersonName);
         EditText editTextEmail = findViewById(R.id.editTextTextPersonEmail);
         EditText editTextProblem = findViewById(R.id.editTextTextMultiLine);
@@ -186,4 +179,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+    public void openDestinationFragmentOnClick(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,
+                new DestinationFragment()).commit();
+    }
 }

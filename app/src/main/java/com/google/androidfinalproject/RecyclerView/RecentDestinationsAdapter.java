@@ -1,5 +1,6 @@
 package com.google.androidfinalproject.RecyclerView;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +43,8 @@ public class RecentDestinationsAdapter extends RecyclerView.Adapter<RecentDestin
         RecentDestination currentDestination = recentDestinationsList.get(position);
         holder.getMall().setText(currentDestination.getMall());
         holder.getDetails().setText(currentDestination.getDetails());
+        String path = holder.getMall().toString() + ".jpg";
+        holder.getMallPhoto().setImageDrawable(Drawable.createFromPath(path));
     }
 
     @Override
