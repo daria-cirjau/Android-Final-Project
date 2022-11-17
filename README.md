@@ -13,4 +13,3 @@ This is an Android app for parking spots reservation. I used the following:
 ![4](https://user-images.githubusercontent.com/81715374/170064607-2d73a224-54bf-4471-adc2-41617a4e54e5.png)
 ![5](https://user-images.githubusercontent.com/81715374/170064608-7a640361-dae5-4a85-86c9-1cfa75ba59fc.png)
 ![6](https://user-images.githubusercontent.com/81715374/170064611-11d2b49b-4fc9-41f1-a6f8-882280502e8a.png)
-![7](https://user-images.githubusercontent.com/81715374/170064612-3a91acbb-fc4e-43fa-b69d-02c6d26b39c6.png)
